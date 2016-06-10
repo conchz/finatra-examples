@@ -33,9 +33,11 @@ lazy val root = (project in file("."))
       ("MIT", url("https://opensource.org/licenses/MIT"))
     ),
 
+    scalaVersion := "2.11.8",
+
     parallelExecution in ThisBuild := false,
 
-    scalaVersion := "2.11.8",
+    fork in run := true,
 
     scalacOptions ++= Seq(
       "-unchecked",
